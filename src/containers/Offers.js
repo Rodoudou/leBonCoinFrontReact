@@ -12,7 +12,7 @@ export default function Offers() {
       );
       setData(response.data);
       setIsLoading(false);
-      console.log("response.data : /Offers=>", data);
+      console.log("response.data : /Offers=>", response.data.offers);
     };
     fetchData();
   }, []);
@@ -25,9 +25,23 @@ export default function Offers() {
           <ul>
             {data.offers.map((offer, index) => {
               return (
-                <li key={offer._id}>
-                  <Link to={"/offer/" + offer._id}>
-                    <div>{offer.title}</div>
+                <li key={offer._id} style={{ listStyle: "none" }}>
+                  <Link to={"/offer/" + offer._id} style={{ display: "flex" }}>
+                    <div style={{ backgroundColor: "#CAD1D9" }}>
+                      <div style={{ backgroundColor: "#FFFFFF" }}>
+                        <img
+                          src={offer.pictures[0]}
+                          style={{ height: 180, width: 240, marginRight: 5 }}
+                          alt={offer.title}
+                        />
+                      </div>
+
+                      <div style={{ display: "flex", flexDirection: "column" }}>
+                        <p>{offer.title}</p>
+                        <p>{offer.price}</p>
+                        <p>{offer.description}</p>
+                      </div>
+                    </div>
                   </Link>
                 </li>
               );

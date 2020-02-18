@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Cookies from "js-cookie";
 import { Elements, StripeProvider } from "react-stripe-elements";
 import CheckoutForm from "./containers/CheckoutForm";
-
 import Header from "./components/Header";
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
@@ -11,6 +11,10 @@ import LogIn from "./containers/LogIn";
 import SignUp from "./containers/SignUp";
 import Publish from "./components/Publish";
 import Payment from "./containers/Payment";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
+library.add(faPlusSquare);
 
 function App() {
   const tokenFromCookie = Cookies.get("userToken");
@@ -46,11 +50,6 @@ function App() {
             <Payment />
           </Route>
         </Switch>
-        {/* #######################"" */}
-        <Elements>
-          <CheckoutForm />
-        </Elements>
-        {/* #############################"" */}
       </Router>
     </StripeProvider>
   );

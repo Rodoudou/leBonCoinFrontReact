@@ -34,7 +34,8 @@ export default function Offer({ user }) {
           {user === null ? (
             <Redirect push to="/log_in" />
           ) : (
-            <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span>{data.creator.account.username}</span>
               <button
                 onClick={() => {
                   history.push("/payment", {

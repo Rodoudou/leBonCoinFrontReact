@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import logo from "../components/image.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cookies from "js-cookie";
+
 const Header = ({ user, setUser, username }) => {
   const history = useHistory();
   return (
@@ -24,13 +25,24 @@ const Header = ({ user, setUser, username }) => {
           {user === null ? (
             <Link to="/log_in">
               <div style={{ display: "flex" }}>
-                <button className="btn-annonce">Déposer une annonce</button>
+                <button
+                  className="btn-annonce"
+                  style={{ backgroundColor: "#F16B16" }}
+                >
+                  <i class="faPlusSquare"></i>Déposer une annonce
+                </button>
               </div>
             </Link>
           ) : (
             <Link to="/publish">
               <div>
-                <button className="btn-annonce">Déposer une annonce</button>
+                <button
+                  className="btn-annonce"
+                  style={{ backgroundColor: "#F16B16" }}
+                >
+                  <FontAwesomeIcon icon="faPlusSquare" />
+                  Déposer une annonce
+                </button>
               </div>
             </Link>
           )}

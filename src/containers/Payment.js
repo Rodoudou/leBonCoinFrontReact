@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import CheckoutForm from "./CheckoutForm";
+import { Elements } from "react-stripe-elements";
 
 export default function Payment() {
   const location = useLocation();
@@ -14,6 +16,9 @@ export default function Payment() {
       <span style={{ color: "orange" }}>{price}</span>
 
       <h2>Vos coordonnées bancaires</h2>
+      <Elements>
+        <CheckoutForm />
+      </Elements>
     </div>
   );
 }
