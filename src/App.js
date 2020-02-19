@@ -12,6 +12,7 @@ import SignUp from "./containers/SignUp";
 import Publish from "./components/Publish";
 import Payment from "./containers/Payment";
 
+import "./index.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 library.add(faPlusSquare);

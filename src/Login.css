@@ -1,0 +1,116 @@
+.modal {
+  position: absolute;
+  width: 715px;
+  height: 504px;
+  left: 362px;
+  top: 104px;
+}
+
+.connexion {
+  position: absolute;
+  width: 714px;
+  height: 28px;
+  left: 363px;
+  top: 125px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.separateur {
+  position: absolute;
+  width: 558px;
+
+  left: 440px;
+  top: 174px;
+
+  border: 3px solid #f56b2a;
+}
+.separateur--bas {
+  width: 558px;
+  border: 1px solid #e4e8ec;
+}
+
+form {
+  position: absolute;
+  width: 560px;
+  left: 440px;
+  top: 174px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+form > input {
+  width: 560px;
+  height: 44px;
+
+  background: #ffffff;
+  border: 1px solid #d9e0eb;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.spanForm {
+  width: 103px;
+  height: 19px;
+  left: 440px;
+  top: 207px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.btn--seConnecter {
+  width: 560px;
+  height: 44px;
+  background: #4183d7;
+  border-radius: 5px;
+  border: none;
+  margin-top: 6px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.btn--Inscription {
+  width: 560px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #4183d7;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4183d7;
+}
+
+h3 {
+  width: 714px;
+  height: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+}

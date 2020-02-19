@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../Offers.css";
 export default function Offers() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
@@ -21,7 +22,7 @@ export default function Offers() {
       {isLoading ? (
         <p>En chargement...</p>
       ) : (
-        <div>
+        <div className="container--offers">
           <ul>
             {data.offers.map((offer, index) => {
               return (

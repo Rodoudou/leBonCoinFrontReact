@@ -21,7 +21,7 @@ export default function Offer({ user }) {
     fetchData();
   }, [id]);
   return (
-    <div>
+    <div className="offer">
       {isLoading ? (
         <p>En Chargement...</p>
       ) : (

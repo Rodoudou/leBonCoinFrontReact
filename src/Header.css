@@ -1,0 +1,57 @@
+header {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  height: 80px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.logo {
+  height: 29.65px;
+  width: 167.26px;
+}
+.link-Btn--annonce {
+  text-decoration: none;
+}
+.btn-rechercher {
+  text-decoration: none;
+  position: absolute;
+  left: 50.83%;
+  right: 42.85%;
+  top: 33.33%;
+  bottom: 31.67%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.btn-annonce {
+  position: absolute;
+  left: 33.4%;
+  right: 55.83%;
+  top: 35%;
+  bottom: 33.33%;
+
+  border: none;
+  border-radius: 3px;
+
+  font-style: normal;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+}

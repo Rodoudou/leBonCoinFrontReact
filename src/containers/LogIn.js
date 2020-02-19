@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { Link, useHistory } from "react-router-dom";
-
+import "../Login.css";
 export default function LogIn({ user, setUser }) {
   const history = useHistory();
   const [email, setEmail] = useState("");
@@ -10,7 +10,9 @@ export default function LogIn({ user, setUser }) {
 
   return (
     <span>
-      <div>
+      <div className="modal" style={{ marginTop: 300 }}>
+        <h2 className="connexion">Connexion</h2>
+        <hr className="separateur" />
         <form
           onSubmit={async event => {
             event.preventDefault();
@@ -47,27 +49,33 @@ export default function LogIn({ user, setUser }) {
             }
           }}
         >
+          <span className="spanForm">Adresse email</span>
           <input
             type="email"
-            placeholder="email"
             value={email}
             onChange={event => {
               const email = event.target.value;
               setEmail(email);
             }}
           />
+          <span className="spanForm">Mot de passe</span>
           <input
             type="password"
-            placeholder="password"
             value={password}
             onChange={event => {
               const password = event.target.value;
               setPassword(password);
             }}
           />
-          <button type="submit">Se connecter</button>
+          <button className="btn--seConnecter" type="submit">
+            Se connecter
+          </button>
+          <hr className="separateur--bas" />
+          <h3>Vous n'avez pas de compte ?</h3>
+          <Link to="/sign_up">
+            <button className="btn--Inscription">Créer un compte</button>
+          </Link>
         </form>
-        <Link to="/sign_up">S'inscrire</Link>
       </div>
     </span>
   );
